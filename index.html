@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShieldSpan Support</title>
+  <meta name="description" content="Answers and help for ShieldSpan, the on-device ad and tracker blocker.">
+  <link rel="icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=JetBrains+Mono:wght@500&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="icon.png" alt=""><span>ShieldSpan</span></a>
+      <nav class="nav">
+        <a href="./" aria-current="page">Support</a>
+        <a href="privacy/">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <div class="eyebrow">Support</div>
+      <h1>How can we help?</h1>
+      <p class="lead">Quick answers about blocking, filters and statistics. If yours isn’t here, write to us — a real person reads every message.</p>
+    </div>
+
+    <div class="topics">
+      <a class="topic" href="#basics"><span class="n">01</span><b>The basics</b><span>What gets blocked and why there’s a VPN.</span></a>
+      <a class="topic" href="#fixes"><span class="n">02</span><b>Fixing problems</b><span>Broken sites, ads that slip through, drops.</span></a>
+      <a class="topic" href="#data"><span class="n">03</span><b>Your data</b><span>What stays on the phone and how to clear it.</span></a>
+    </div>
+
+    <section class="group" id="basics">
+      <h2><span class="mono">01</span>The basics</h2>
+
+      <details>
+        <summary>What does ShieldSpan block?</summary>
+        <div>
+          <p>Advertising, in-app ads, trackers, analytics, error trackers, social buttons, cookie banners, phone maker telemetry and known malicious sites. Each group is a separate filter you can switch on or off in the <b>Filters</b> tab.</p>
+          <p>Blocking works on domain names, so it covers every app and browser on the phone, not just one.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Why does it need a VPN permission?</summary>
+        <div>
+          <p>The VPN is how the system lets an app see which addresses your apps look up. ShieldSpan sets up a <b>local</b> VPN on the device: there is no remote server on the other end, and your traffic doesn’t leave the phone through us.</p>
+          <p>Lookups for blocked domains are answered on the spot with “does not exist”, so the ad never loads. Everything else is passed on to a public DNS resolver as usual.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I turn protection on or off?</summary>
+        <div>
+          <p>Tap the shield on the <b>Home</b> tab. When it’s whole, protection is on; when the pieces drift apart, it’s off.</p>
+          <p>You can also switch it from the system settings — <b>Settings → VPN</b> on iPhone, or the VPN tile in quick settings on Android.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I block a site myself?</summary>
+        <div>
+          <p>Yes. Open <b>Filters → My rules</b> and add a domain such as <code>example.com</code>. It will be blocked everywhere, on top of the built-in filter lists.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Does ShieldSpan slow down my connection or drain the battery?</summary>
+        <div>
+          <p>Only domain lookups pass through the filter; downloads, video and page content go straight to the network. Because ads never load, many pages actually get lighter.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="group" id="fixes">
+      <h2><span class="mono">02</span>Fixing problems</h2>
+
+      <details>
+        <summary>A site or app stopped working properly</summary>
+        <div>
+          <p>Some services break when one of their tracking domains is blocked. Add the site under <b>Filters → Allowed sites</b> — for 1 hour, 24 hours or always — and ShieldSpan will stop blocking on it.</p>
+          <p>If you’re not sure which domain is to blame, open <b>Statistics → Block log</b> right after the problem happens and look at the most recent entries.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>I still see some ads</summary>
+        <div>
+          <p>Ads served from the same domain as the content itself — for example in some video and social apps — can’t be separated from the content by a domain filter.</p>
+          <p>Also check that the right filters are on in the <b>Filters</b> tab, and restart the app or browser after turning protection on: apps sometimes keep old lookups cached for a while.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Protection turns off by itself</summary>
+        <div>
+          <p>Only one VPN can be active at a time. If you open another VPN app, the system switches ShieldSpan off — turn it back on when you’re done.</p>
+          <p>On Android, battery savers may stop background apps. Set ShieldSpan’s battery usage to <b>Unrestricted</b>, and turn on <b>Launch with the system</b> in ShieldSpan settings so protection comes back after a restart.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>It says “Couldn’t turn on protection”</summary>
+        <div>
+          <p>Usually the VPN permission was declined or removed. Tap the shield again and allow the connection request. If another VPN app is set as “always-on” in system settings, turn that off first.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="group" id="data">
+      <h2><span class="mono">03</span>Your data</h2>
+
+      <details>
+        <summary>Can you see the sites I visit?</summary>
+        <div>
+          <p>No. ShieldSpan has no servers and no accounts, and it doesn’t contain analytics or tracking SDKs. Statistics and the block log are kept on your phone only. Details are in our <a href="privacy/">privacy policy</a>.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Where do the statistics come from?</summary>
+        <div>
+          <p>They’re counted on the device as the filter works: how many lookups were blocked, which categories and companies they belonged to and, on Android, which app made them. The app keeps the last 60 days.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I remove everything ShieldSpan stored?</summary>
+        <div>
+          <p>Delete the app. All its statistics, rules and allowed sites are stored inside it and go away with it. On iPhone you can also remove the VPN profile in <b>Settings → General → VPN &amp; Device Management</b>.</p>
+        </div>
+      </details>
+    </section>
+
+    <div class="contact">
+      <div>
+        <h2>Still stuck?</h2>
+        <p>Write to <a href="mailto:hodkins@mbrentimob.com">hodkins@mbrentimob.com</a>. Tell us your phone model, system version and ShieldSpan version (it’s under <b>Settings → About ShieldSpan</b>) — it helps us answer faster.</p>
+      </div>
+      <a class="btn" href="mailto:hodkins@mbrentimob.com?subject=ShieldSpan%20support">Email support</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 M.B. RENT IMOB S.R.L.</span>
+      <a href="privacy/">Privacy policy</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShieldSpan Privacy Policy</title>
+  <meta name="description" content="How ShieldSpan handles your data: on-device filtering, no accounts, no analytics.">
+  <link rel="icon" href="../icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=JetBrains+Mono:wght@500&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../icon.png" alt=""><span>ShieldSpan</span></a>
+      <nav class="nav">
+        <a href="../">Support</a>
+        <a href="./" aria-current="page">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <div class="eyebrow">Privacy policy · Effective 25 November 2026</div>
+      <h1>Your traffic stays yours.</h1>
+      <p class="lead">ShieldSpan blocks ads and trackers right on your phone. This page explains exactly what the app does with your data — in short, it keeps everything on the device and sends nothing to us.</p>
+
+      <div class="facts">
+        <div class="fact"><b>On-device</b><span>Filtering runs inside the app, with no remote server of ours.</span></div>
+        <div class="fact"><b>No account</b><span>No sign-up, no email, no login.</span></div>
+        <div class="fact"><b>No analytics</b><span>No tracking, ad or analytics SDKs inside.</span></div>
+        <div class="fact"><b>Nothing sold</b><span>We hold no personal data to sell or share.</span></div>
+      </div>
+    </div>
+
+    <div class="doc">
+      <aside class="toc">
+        <p>On this page</p>
+        <ol>
+          <li><a href="#who">Who we are</a></li>
+          <li><a href="#how">How filtering works</a></li>
+          <li><a href="#dns">DNS resolvers</a></li>
+          <li><a href="#stored">What stays on your phone</a></li>
+          <li><a href="#never">What we never collect</a></li>
+          <li><a href="#sharing">Sharing</a></li>
+          <li><a href="#control">Deleting your data</a></li>
+          <li><a href="#rights">Your rights</a></li>
+          <li><a href="#children">Children</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#changes">Changes</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </aside>
+
+      <article class="content">
+        <section id="who">
+          <h2>Who we are</h2>
+          <p>ShieldSpan is published by <b>M.B. RENT IMOB S.R.L.</b> (“we”, “us”). This policy covers the ShieldSpan app for iPhone, iPad and Android. You can reach us at <a href="mailto:hodkins@mbrentimob.com">hodkins@mbrentimob.com</a>.</p>
+        </section>
+
+        <section id="how">
+          <h2>How filtering works</h2>
+          <p>To block ads in every app, ShieldSpan uses the system VPN interface — <b>Network Extension</b> on iOS and iPadOS, <b>VpnService</b> on Android. The VPN is local: it only routes your phone’s DNS lookups (the step where an app asks “what is the address of <code>ads.example.com</code>?”) through the filter inside the app.</p>
+          <ul>
+            <li>If the domain is on an enabled filter list or in your own rules, the app answers “does not exist” right away and the request never goes out.</li>
+            <li>Any other lookup is forwarded unchanged to a public DNS resolver (see below), and the answer is passed back to the app that asked.</li>
+            <li>The content of your traffic — pages, messages, video, downloads — is not routed through the filter and is never read.</li>
+          </ul>
+          <p>The filter lists ship inside the app; filtering does not depend on a server of ours.</p>
+        </section>
+
+        <section id="dns">
+          <h2>DNS resolvers</h2>
+          <p>Lookups that are not blocked go to a public resolver, the same way they would without ShieldSpan. The resolver receives the domain name and your public IP address, under its own privacy terms:</p>
+          <table class="table">
+            <thead><tr><th>Resolver</th><th>Address</th><th>Role</th></tr></thead>
+            <tbody>
+              <tr><td><a href="https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/" rel="noopener">Cloudflare DNS</a></td><td class="mono">1.1.1.1</td><td>Primary</td></tr>
+              <tr><td><a href="https://developers.google.com/speed/public-dns/privacy" rel="noopener">Google Public DNS</a></td><td class="mono">8.8.8.8</td><td>Used only if Cloudflare doesn’t answer</td></tr>
+            </tbody>
+          </table>
+          <p>These lookups use standard, unencrypted DNS, so your internet provider or network operator can see them, as they normally would.</p>
+        </section>
+
+        <section id="stored">
+          <h2>What stays on your phone</h2>
+          <p>To show you statistics and remember your choices, the app keeps the following in its private storage. None of it is sent to us.</p>
+          <table class="table">
+            <thead><tr><th>Data</th><th>Kept for</th></tr></thead>
+            <tbody>
+              <tr><td>Daily counts: lookups, blocks per category, and the filter rules that matched</td><td>60 days</td></tr>
+              <tr><td>Recently blocked domains, with time, category and how many times each was blocked</td><td>Last 50 domains</td></tr>
+              <tr><td>On Android only: the name of the app that made a blocked request, when the system reports it</td><td>60 days</td></tr>
+              <tr><td>Your settings: enabled filters, allowed sites (with your notes and expiry), your own block rules, language and launch options</td><td>Until you change them</td></tr>
+            </tbody>
+          </table>
+          <p>Domains that were <b>not</b> blocked are counted but their names are not saved, so the app has no browsing history. On Android, ShieldSpan is excluded from system backups. On iOS, app data may be part of your own device or iCloud backup, which is controlled by Apple and you.</p>
+        </section>
+
+        <section id="never">
+          <h2>What we never collect</h2>
+          <ul class="never">
+            <li>Browsing or DNS history</li>
+            <li>Name, email or phone number</li>
+            <li>IP address or location</li>
+            <li>Contacts, photos or files</li>
+            <li>Advertising or device identifiers</li>
+            <li>Analytics or usage events</li>
+            <li>Payment details</li>
+            <li>Content of your traffic</li>
+          </ul>
+          <p>ShieldSpan has no accounts, in-app purchases or cloud sync. If you opt in to share diagnostics with Apple or Google, they may pass anonymous crash reports and aggregate usage figures to us through their developer consoles, under their own policies.</p>
+        </section>
+
+        <section id="sharing">
+          <h2>Sharing</h2>
+          <p>Because we don’t receive personal data, we don’t sell it, share it or use it for advertising. The only third parties involved are the DNS resolvers above and Apple or Google as app store and operating system providers.</p>
+        </section>
+
+        <section id="control">
+          <h2>Deleting your data</h2>
+          <ul>
+            <li>Remove an allowed site or a rule from <b>Filters → Allowed sites</b> or <b>Filters → My rules</b>.</li>
+            <li>Turn protection off at any time from the Home tab or the system VPN settings.</li>
+            <li>Uninstall the app to delete all statistics and settings. On iPhone you can also remove the VPN profile in <b>Settings → General → VPN &amp; Device Management</b>.</li>
+          </ul>
+        </section>
+
+        <section id="rights">
+          <h2>Your rights</h2>
+          <p>Depending on where you live, laws such as the GDPR (EU and UK) or the CCPA/CPRA (California) give you rights to access, correct, delete or port your personal data and to object to its processing. Since all ShieldSpan data stays on your device, you exercise these rights directly in the app. We hold no copy to hand over, and we do not sell or share personal information as the CCPA defines it. You can still contact us with any request and we will answer it.</p>
+        </section>
+
+        <section id="children">
+          <h2>Children</h2>
+          <p>ShieldSpan is not directed at children under 13, or under the age of digital consent where you live. We don’t knowingly collect data from children; if you believe a child has sent us personal information by email, write to us and we will delete it.</p>
+        </section>
+
+        <section id="security">
+          <h2>Security</h2>
+          <p>Filtering happens on the device and the app’s data lives in its private, sandboxed storage that other apps can’t read. Protect your phone with a passcode or biometric lock to keep that data safe.</p>
+        </section>
+
+        <section id="changes">
+          <h2>Changes</h2>
+          <p>If we change how ShieldSpan handles data, we’ll update this page and the date at the top, and point out important changes in the release notes or in the app.</p>
+        </section>
+
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>Questions about privacy? Write to <a href="mailto:hodkins@mbrentimob.com">hodkins@mbrentimob.com</a> — M.B. RENT IMOB S.R.L.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 M.B. RENT IMOB S.R.L.</span>
+      <a href="../">Support</a>
+    </div>
+  </footer>
+</body>
+</html>
